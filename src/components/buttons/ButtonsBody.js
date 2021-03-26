@@ -41,7 +41,8 @@ export default function() {
 
 const styles = StyleSheet.create({
   buttonAreaContainer: {
-    flexDirection: 'row' 
+    flexDirection: 'row',
+    height: 80,
   },
   marginAreaButton: {
     marginTop: 10,
