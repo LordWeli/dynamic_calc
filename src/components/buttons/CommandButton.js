@@ -2,9 +2,32 @@ import React from 'react';
 import { StyleSheet, TouchableOpacity, Text } from 'react-native';
 
 export default function(props) {
+  const operators = ['C', '%', '*', '←', '/', '-', '+', '.', '=', '≠']
+
+  const getButtonText = (value) => {
+    if(checkIsOperator(value)) { getOperator(value) }
+    if(checkIsNumeric(value)) { getNumber(value) }
+  }
+
+  const checkIsOperator = (value) => {
+    return operators.includes(value)
+  }
+
+  const checkIsNumeric = (value) => {
+    return /^-?\d+$/.test(value)
+  }
+
+  const getNumber = (value) => {
+    console.log('Number')
+  }
+
+  const getOperator = (value) => {
+    console.log('Operator')
+  }
+
   return (
-    <TouchableOpacity style={styles.buttonStyle}>
-      <Text style={styles.textButton}>{props.valueNumber}</Text>
+    <TouchableOpacity style={styles.buttonStyle} onPress={getButtonText(props.valueButton)}>
+      <Text style={styles.textButton}>{props.valueButton}</Text>
     </TouchableOpacity>
   )
 }
