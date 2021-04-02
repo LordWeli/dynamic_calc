@@ -18,16 +18,16 @@ export default function(props) {
   }
 
   const getNumber = (value) => {
-    console.log('Number')
+    props.updateNumber(value)
   }
 
   const getOperator = (value) => {
-    console.log('Operator')
+    props.updateNumber(value)
   }
 
   return (
-    <TouchableOpacity style={styles.buttonStyle} onPress={getButtonText(props.valueButton)}>
-      <Text style={styles.textButton}>{props.valueButton}</Text>
+    <TouchableOpacity style={styles.buttonStyle} onPress={() => getButtonText(props.valueButton)}>
+      <Text style={styles.textButton}> {props.valueButton} </Text>
     </TouchableOpacity>
   )
 }

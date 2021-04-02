@@ -2,40 +2,35 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import CommandButton from './CommandButton';
 
-export default function() {
+export default function(props) {
   const button_text = [
     {
-      line: ['C', '%', '*', '←'],
-      method: 'getButtonText()'
+      line: ['C', '%', '*', '←']
     },
     {
-      line: ['7', '8', '9', '/'],
-      method: 'getButtonText()'
+      line: ['7', '8', '9', '/']
     },
     {
-      line: ['4', '5', '6', '-'],
-      method: 'getButtonText()'
+      line: ['4', '5', '6', '-']
     },
     {
-      line: ['1', '2', '3', '+'],
-      method: 'getButtonText()'
+      line: ['1', '2', '3', '+']
     },
     {
-      line: ['≠', '0', '.', '='],
-      method: 'getButtonText()'
+      line: ['≠', '0', '.', '=']
     }
   ]
 
   return (
     <View style={styles.marginAreaButton}>
       {
-        button_text.map((titles) => {
+        button_text.map((titles, titles_index) => {
           return (
-            <View style={styles.buttonAreaContainer}>
+            <View style={styles.buttonAreaContainer} key={titles_index}>
               {
-                titles.line.map((text) => {
+                titles.line.map((text, text_index) => {
                   return (
-                    <CommandButton valueButton={text} method={titles.method}/>
+                    <CommandButton valueButton={text} key={text_index} updateNumber={props.updateState}/>
                   )
                 })
               }
