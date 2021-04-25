@@ -26,25 +26,25 @@ export default function(props) {
   }
 
   return (
-    <TouchableOpacity style={styles.buttonStyle} onPress={() => getButtonText(props.valueButton)}>
-      <Text style={styles.textButton}> {props.valueButton} </Text>
+    <TouchableOpacity style={styles(props).buttonStyle} onPress={() => getButtonText(props.valueButton)}>
+      <Text style={styles(props).textButton}> {props.valueButton} </Text>
     </TouchableOpacity>
   )
 }
 
-const styles = StyleSheet.create({
+const styles = (props) => StyleSheet.create({
   buttonStyle: {
-    color: '#2e3436',
     margin: 5,
     padding: 10,
     borderRadius: 10,
-    backgroundColor: '#e7e7e7',
+    backgroundColor: props.theme.button.background,
     width: '22%',
     alignItems: 'center',
     justifyContent: 'center',
+    textAlign: 'center',
   },
   textButton: {
-    textAlign: 'center',
+    color: props.theme.color,
     fontFamily: 'Futura',
     fontSize: 35
   }

@@ -1,11 +1,19 @@
 import React from 'react';
-import { SafeAreaView, Text } from 'react-native';
+import { SafeAreaView, useColorScheme } from 'react-native';
+import { ThemeProvider } from 'styled-components';
+import Themes from './src/components/themes';
 import Body from './src/components/Body'
 
+
 export default function App() {
+  const deviceTheme = useColorScheme();
+  const theme = Themes[deviceTheme] || theme.dark;
+
   return (
-    <SafeAreaView>
-      <Body/>
-    </SafeAreaView>
+    <ThemeProvider theme={theme}>
+      <SafeAreaView>
+        <Body theme={theme}/>
+      </SafeAreaView>
+    </ThemeProvider>
   );
 }

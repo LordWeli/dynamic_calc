@@ -30,7 +30,7 @@ export default function(props) {
               {
                 titles.line.map((text, text_index) => {
                   return (
-                    <CommandButton valueButton={text} key={text_index} updateNumber={props.updateState}/>
+                    <CommandButton valueButton={text} key={text_index} updateNumber={props.updateState} theme={props.theme}/>
                   )
                 })
               }

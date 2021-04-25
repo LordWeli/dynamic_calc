@@ -1,42 +1,43 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, TextInput } from 'react-native';
-import CommandButtons from './buttons/ButtonsBody'
+import ButtonsBody from './buttons/ButtonsBody'
 
-export default function() {
-  const [numbers, setNumbers] = useState(0);
+export default function(props) {
+  const [numbers, setNumbers] = useState();
 
   const updateSetNumbers = (value) => {
     setNumbers(value)
   }
 
   return (
-    <View style={styles.container}>
-      <View style={styles.areaContainer}>
-        <TextInput editable={false} style={styles.textArea} textAlign='right' value={numbers}/>
-        <CommandButtons updateState={updateSetNumbers}/>
+    <View style={styles(props).container}>
+      <View style={styles(props).areaContainer}>
+        <TextInput editable={false} style={styles(props).textArea} textAlign='right' value={numbers}/>
+        <ButtonsBody updateState={updateSetNumbers} theme={props.theme}/>
       </View>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
+const styles = (props) => StyleSheet.create({
   container: {
-    backgroundColor: '#ffffff',
+    backgroundColor: props.theme.background,
     width: '100%',
     height: '100%',
     alignItems: 'center',
     justifyContent: 'center',
-    flex: 1
   },
   areaContainer: {
+    backgroundColor: props.theme.background,
     width: '90%',
-    height: '95%'
+    height: '95%',
   },
   textArea: {
-    borderColor: '#b7b7b7',
+    borderColor: props.theme.input.borderColor,
     borderWidth: 1,
     width: '100%',
     height: 200,
-    fontSize: 45
+    fontSize: 45,
+    color: props.theme.color,
   }
 });
