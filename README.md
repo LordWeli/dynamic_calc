@@ -55,6 +55,25 @@ Content Index
   <tr>
 </table>
 
+- #### Return Numbers To TextArea
+
+<table>
+  <thead>
+    <tr>
+      <th> Light </th>
+      <th> Dark </th>
+    </tr>
+  </thead>
+  <tr>
+    <td>
+      <img src="./assets/images/return_numbers_to_textarea_light.jpeg" width="350px" height="480px"/>
+    </td>
+    <td>
+      <img src="./assets/images/return_numbers_to_textarea_dark.jpeg" width="350px" height="480px"/>
+    </td>
+  <tr>
+</table>
+
 ---
 
 ### --- :construction: Under Construction :construction: ---
