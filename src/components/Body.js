@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, TextInput } from 'react-native';
 import ButtonsBody from './buttons/ButtonsBody'
+import * as Results from './functions/Results'
 
 export default function(props) {
   const [numbers, setNumbers] = useState([]);
 
-
   const updateSetNumbers = (value) => {
     setNumbers([...numbers, value])
+  }
+
+  const getAllResults = () => {
+    setNumbers(Results.getResult(numbers))
   }
 
   const clearInput = () => {
@@ -18,7 +22,7 @@ export default function(props) {
     <View style={styles(props).container}>
       <View style={styles(props).areaContainer}>
         <TextInput editable={false} style={styles(props).textArea} textAlign='right' value={numbers.join(' ')}/>
-        <ButtonsBody updateState={updateSetNumbers} clearInput={clearInput} theme={props.theme}/>
+        <ButtonsBody updateState={updateSetNumbers} clearInput={clearInput} theme={props.theme} getAllResults={getAllResults}/>
       </View>
     </View>
   );

@@ -1,21 +1,13 @@
 import React from 'react';
 import { StyleSheet, TouchableOpacity, Text } from 'react-native';
+import { checkIsOperator, checkIsNumeric } from '../functions/CheckValues'
 
 export default function(props) {
-  const operators = ['C', '%', '*', '←', '/', '-', '+', '=', '≠']
-
   const getButtonText = (value) => {
     if(checkIsOperator(value)) { getOperator(value) }
     if(checkIsNumeric(value)) { getNumber(value) }
     if(value == 'C') { props.clearInput() }
-  }
-
-  const checkIsOperator = (value) => {
-    return operators.includes(value)
-  }
-
-  const checkIsNumeric = (value) => {
-    return /^-?\d+$/.test(value) || value == '.'
+    if(value == '=') { props.getAllResults() }
   }
 
   const getNumber = (value) => {
@@ -23,7 +15,7 @@ export default function(props) {
   }
 
   const getOperator = (value) => {
-    // props.updateNumber(value)
+    props.updateNumber(value)
   }
 
   return (
