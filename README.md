@@ -27,10 +27,10 @@ Content Index
   <tbody>
     <tr>
       <td>
-        <img src="./assets/images/create_layout.jpeg" width="350px" height="480px"/>
+        <img src="./assets/images/create_layout.jpeg" width="350px" height="420px"/>
       </td>
       <td>
-        <img src="./assets/images/addition_styled_button.jpeg" width="350px" height="480px"/>
+        <img src="./assets/images/addition_styled_button.jpeg" width="350px" height="420px"/>
       </td>
     </tr>
   </tbody>
@@ -47,10 +47,10 @@ Content Index
   </thead>
   <tr>
     <td>
-      <img src="./assets/images/light_theme.jpeg" width="350px" height="480px"/>
+      <img src="./assets/images/light_theme.jpeg" width="350px" height="420px"/>
     </td>
     <td>
-      <img src="./assets/images/dark_theme.jpeg" width="350px" height="480px"/>
+      <img src="./assets/images/dark_theme.jpeg" width="350px" height="420px"/>
     </td>
   <tr>
 </table>
@@ -66,10 +66,29 @@ Content Index
   </thead>
   <tr>
     <td>
-      <img src="./assets/images/return_numbers_to_textarea_light.jpeg" width="350px" height="480px"/>
+      <img src="./assets/images/return_numbers_to_textarea_light.jpeg" width="350px" height="420px"/>
     </td>
     <td>
-      <img src="./assets/images/return_numbers_to_textarea_dark.jpeg" width="350px" height="480px"/>
+      <img src="./assets/images/return_numbers_to_textarea_dark.jpeg" width="350px" height="420px"/>
+    </td>
+  <tr>
+</table>
+
+- #### Return Results
+
+<table>
+  <thead>
+    <tr>
+      <th> Light </th>
+      <th> Dark </th>
+    </tr>
+  </thead>
+  <tr>
+    <td>
+      <img src="./assets/images/return__numbers_to_results_dark.jpeg" width="350px" height="420px"/>
+    </td>
+    <td>
+      <img src="./assets/images/return_results_dark.jpeg" width="350px" height="420px"/>
     </td>
   <tr>
 </table>
