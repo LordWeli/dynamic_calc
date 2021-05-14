@@ -30,7 +30,7 @@ const styles = (props) => StyleSheet.create({
     margin: 5,
     padding: 10,
     borderRadius: 10,
-    backgroundColor: props.theme.button.background,
+    backgroundColor: checkIsNumeric(props.valueButton) ? props.theme.button.background : props.theme.button.backgroundOperators,
     width: '22%',
     alignItems: 'center',
     justifyContent: 'center',
@@ -39,6 +39,9 @@ const styles = (props) => StyleSheet.create({
   textButton: {
     color: props.theme.color,
     fontFamily: 'Futura',
-    fontSize: 35
+    fontSize: 35,
+    fontWeight: checkIsNumeric(props.valueButton) || props.valueButton == '*' ? 'normal' : 'bold',
+    marginTop: props.valueButton == '*' ? 12 : 0,
+    marginBottom: props.valueButton == '.' ? 12 : 0
   }
 })

@@ -79,8 +79,7 @@ Content Index
 <table>
   <thead>
     <tr>
-      <th> Light </th>
-      <th> Dark </th>
+      <th colspan='2'> Dark </th>
     </tr>
   </thead>
   <tr>
@@ -89,6 +88,25 @@ Content Index
     </td>
     <td>
       <img src="./assets/images/return_results_dark.jpeg" width="350px" height="420px"/>
+    </td>
+  <tr>
+</table>
+
+- #### Stylization Of Operator Buttons
+
+<table>
+  <thead>
+    <tr>
+      <th> Light </th>
+      <th> Dark </th>
+    </tr>
+  </thead>
+  <tr>
+    <td>
+      <img src="./assets/images/stylization_of_operator_buttons_light.jpeg" width="350px" height="420px"/>
+    </td>
+    <td>
+      <img src="./assets/images/stylization_of_operator_buttons_dark.jpeg" width="350px" height="420px"/>
     </td>
   <tr>
 </table>
