@@ -32,7 +32,7 @@ export default function(props) {
                   return (
                     <CommandButton valueButton={text} key={text_index} updateNumber={props.updateState}
                       clearInput={props.clearInput} theme={props.theme} getAllResults={props.getAllResults}
-                      removeLastValue={props.removeLastValue}/>
+                      removeLastValue={props.removeLastValue} numberPercentage={props.numberPercentage}/>
                   )
                 })
               }

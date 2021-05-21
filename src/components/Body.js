@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import { StyleSheet, View, TextInput } from 'react-native';
 import ButtonsBody from './buttons/ButtonsBody'
 import * as Results from './functions/Results'
+import * as VerifyOperatorValues from './functions/VerifyOperatorValues'
 
 export default function(props) {
   const [numbers, setNumbers] = useState([]);
 
   const updateSetNumbers = (value) => {
-    if(!Results.checkFirstOperator(numbers, value)) {
-      if(!Results.vefiryLastOperator(numbers, value)) {
+    if(!VerifyOperatorValues.checkFirstOperator(numbers, value)) {
+      if(!VerifyOperatorValues.vefiryLastOperator(numbers, value)) {
         setNumbers([...numbers, value])
       }
     }
@@ -23,9 +24,13 @@ export default function(props) {
   }
 
   const lastValue = () => {
-    let values = Results.removeLastValue(numbers)
+    let values = VerifyOperatorValues.removeLastValue(numbers)
 
     setNumbers(values)
+  }
+
+  const numberPercentage = (value) => {
+    setNumbers(VerifyOperatorValues.numberPercentage(numbers))
   }
 
   return (
@@ -33,7 +38,7 @@ export default function(props) {
       <View style={styles(props).areaContainer}>
         <TextInput editable={false} style={styles(props).textArea} textAlign='right' value={numbers.join(' ')}/>
         <ButtonsBody updateState={updateSetNumbers} clearInput={clearInput} theme={props.theme}
-          getAllResults={getAllResults} removeLastValue={lastValue}/>
+          getAllResults={getAllResults} removeLastValue={lastValue} numberPercentage={numberPercentage}/>
       </View>
     </View>
   );

@@ -1,4 +1,4 @@
-const operators = ['%', '*', '/', '-', '+', '.', '≠']
+const operators = ['*', '/', '-', '+', '.']
 
 export const checkIsOperator = (value) => {
   return operators.includes(value)

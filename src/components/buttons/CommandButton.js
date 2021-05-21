@@ -9,6 +9,7 @@ export default function(props) {
     if(value == 'C') { props.clearInput() }
     if(value == '=') { props.getAllResults() }
     if(value == '←') { props.removeLastValue() }
+    if(value == '%') { props.numberPercentage(value) }
   }
 
   const getNumber = (value) => {
