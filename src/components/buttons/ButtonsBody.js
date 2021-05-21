@@ -30,7 +30,9 @@ export default function(props) {
               {
                 titles.line.map((text, text_index) => {
                   return (
-                    <CommandButton valueButton={text} key={text_index} updateNumber={props.updateState} clearInput={props.clearInput} theme={props.theme} getAllResults={props.getAllResults}/>
+                    <CommandButton valueButton={text} key={text_index} updateNumber={props.updateState}
+                      clearInput={props.clearInput} theme={props.theme} getAllResults={props.getAllResults}
+                      removeLastValue={props.removeLastValue}/>
                   )
                 })
               }

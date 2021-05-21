@@ -18,11 +18,18 @@ export default function(props) {
     setNumbers([])
   }
 
+  const lastValue = () => {
+    let values = Results.removeLastValue(numbers)
+
+    setNumbers(values)
+  }
+
   return (
     <View style={styles(props).container}>
       <View style={styles(props).areaContainer}>
         <TextInput editable={false} style={styles(props).textArea} textAlign='right' value={numbers.join(' ')}/>
-        <ButtonsBody updateState={updateSetNumbers} clearInput={clearInput} theme={props.theme} getAllResults={getAllResults}/>
+        <ButtonsBody updateState={updateSetNumbers} clearInput={clearInput} theme={props.theme}
+          getAllResults={getAllResults} removeLastValue={lastValue}/>
       </View>
     </View>
   );

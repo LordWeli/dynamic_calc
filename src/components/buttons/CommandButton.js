@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, TouchableOpacity, Text } from 'react-native';
-import { checkIsOperator, checkIsNumeric } from '../functions/CheckValues'
+import { checkIsOperator, checkIsNumeric, checkButtonToMargin } from '../functions/CheckValues'
 
 export default function(props) {
   const getButtonText = (value) => {
@@ -8,6 +8,7 @@ export default function(props) {
     if(checkIsNumeric(value)) { getNumber(value) }
     if(value == 'C') { props.clearInput() }
     if(value == '=') { props.getAllResults() }
+    if(value == '←') { props.removeLastValue() }
   }
 
   const getNumber = (value) => {
@@ -41,7 +42,7 @@ const styles = (props) => StyleSheet.create({
     fontFamily: 'Futura',
     fontSize: 35,
     fontWeight: checkIsNumeric(props.valueButton) || props.valueButton == '*' ? 'normal' : 'bold',
-    marginTop: props.valueButton == '*' ? 12 : 0,
-    marginBottom: props.valueButton == '.' ? 12 : 0
+    marginTop: checkButtonToMargin(props.valueButton, '*'),
+    marginBottom: checkButtonToMargin(props.valueButton, '.')
   }
 })

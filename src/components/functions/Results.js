@@ -16,3 +16,11 @@ const checkLastElement = (params) => {
 
   return params
 }
+
+export const removeLastValue = (params) => {
+  let values = params
+
+  values.pop()
+
+  return values.join(',').split(',')
+}
