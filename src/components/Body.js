@@ -7,7 +7,11 @@ export default function(props) {
   const [numbers, setNumbers] = useState([]);
 
   const updateSetNumbers = (value) => {
-    setNumbers([...numbers, value])
+    if(!Results.checkFirstOperator(numbers, value)) {
+      if(!Results.vefiryLastOperator(numbers, value)) {
+        setNumbers([...numbers, value])
+      }
+    }
   }
 
   const getAllResults = () => {

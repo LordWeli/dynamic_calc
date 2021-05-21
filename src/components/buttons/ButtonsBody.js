@@ -17,7 +17,7 @@ export default function(props) {
       line: ['1', '2', '3', '+']
     },
     {
-      line: ['≠', '0', '.', '=']
+      line: ['', '0', '.', '=']
     }
   ]
 
